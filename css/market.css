@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf8d7;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-main-container {
+    background: rgb(87, 248, 87);
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.project-name {
+    color: white;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 200px;
+}
+
+.nav-links-container,
+.auth-links-container {
+    display: flex;
+    gap: 12px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu-item:hover {
+    color: black;
+}
+
+/* ===== BODY ===== */
+
+
+/* ===== MARKET TABLE ===== */
+.market-container {
+    width: 90%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.market-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===== BUY BUTTON ===== */
+.buy-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+}
+
+/* Tooltip effect (title) */
+.buy-btn[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 100;
+}

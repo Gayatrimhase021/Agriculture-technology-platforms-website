@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Page</title>
+    <link rel="stylesheet" href="../css/market.css">
+</head>
+
+<body>
+
+    <!-- Navbar (waise hi jo aapne diya) -->
+    <header class="navbar-main-container">
+        <div class="logo-container">
+            <img src="./images/logo img.jpg" alt="farming" class="main-logo">
+            <span class="project-name">Web Portal For Farmer</span>
+        </div>
+
+        <nav>
+           <div class="nav-links-container">
+            <a href="./../index.html" class="menu-item">Home</a>
+            <a href="../pages/crop.html" class="menu-item">Crops</a>
+            <a href="../pages/weather.html" class="menu-item">Weather</a>
+            <a href="../pages/market.html" class="menu-item">Market</a>
+            <a href="../pages/contact.html" class="menu-item">Contact</a>
+        </div>
+
+        <div class="auth-links-container">
+            <a href="./pages/login.html" class="menu-item">Login</a>
+            <a href="./pages/signup.html" class="menu-item">Signup</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Market Table -->
+    <div class="market-container">
+        <h2>Market Prices</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Crop</th>
+                    <th>Current Price (₹/kg)</th>
+                    <th>Available Quantity</th>
+                    <th>Buy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Onion</td>
+                    <td>30</td>
+                    <td>500 kg</td>
+                    <td>
+                        <button class="buy-btn" title="Click to buy Onion at ₹30 per kg">Buy Now</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sugarcane</td>
+                    <td>25</td>
+                    <td>300 kg</td>
+                    <td>
+                        <button class="buy-btn" title="Click to buy Sugarcane at ₹25 per kg">Buy Now</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Soyabean</td>
+                    <td>45</td>
+                    <td>200 kg</td>
+                    <td>
+                        <button class="buy-btn" title="Click to buy Soyabean at ₹45 per kg">Buy Now</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cotton</td>
+                    <td>60</td>
+                    <td>150 kg</td>
+                    <td>
+                        <button class="buy-btn" title="Click to buy Cotton at ₹60 per kg">Buy Now</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wheat</td>
+                    <td>35</td>
+                    <td>400 kg</td>
+                    <td>
+                        <button class="buy-btn" title="Click to buy Wheat at ₹35 per kg">Buy Now</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

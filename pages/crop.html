@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Information</title>
+    <link rel="stylesheet" href="../css/crop.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR (NO CHANGES) ===== -->
+<div class="navbar-main-container">
+    <div class="logo-container">
+        <img src="../images/logo img.jpg" alt="farming" class="main-logo">
+        <b class="project-name">Web Portal For Farmer</b>
+    </div>
+
+    <nav>
+        <div class="nav-links-container">
+            <a href="./../index.html" class="menu-item">Home</a>
+            <a href="../pages/crop.html" class="menu-item">Crops</a>
+            <a href="../pages/weather.html" class="menu-item">Weather</a>
+            <a href="../pages/market.html" class="menu-item">Market</a>
+            <a href="../pages/contact.html" class="menu-item">Contact</a>
+        </div>
+
+        <div class="auth-links-container">
+            <a href="./pages/login.html" class="menu-item">Login</a>
+            <a href="./pages/signup.html" class="menu-item">Signup</a>
+        </div>
+    </nav>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <h1>Crop Information for Farmers</h1>
+    <p>Crop details and today’s market prices</p>
+</header>
+
+<!-- Crop Section -->
+<section class="crop-container">
+
+    <div class="crop-card">
+        <img src="../images/onion.jpg" alt="Onion">
+        <h2>Onion</h2>
+        <p>Onion is an important vegetable crop grown widely in India.</p>
+        <button onclick="showPrice('Onion', 2200)">Today Price</button>
+        <p class="price" id="Onion"></p>
+    </div>
+
+    <div class="crop-card">
+        <img src="../images/wheat.jpg" alt="Wheat">
+        <h2>Wheat</h2>
+        <p>Wheat is a major rabi crop and grows in cool climate.</p>
+        <button onclick="showPrice('Wheat', 2400)">Today Price</button>
+        <p class="price" id="Wheat"></p>
+    </div>
+
+    <div class="crop-card">
+        <img src="../images/cotton.jpg" alt="Cotton">
+        <h2>Cotton</h2>
+        <p>Cotton is a cash crop used in textile industries.</p>
+        <button onclick="showPrice('Cotton', 6500)">Today Price</button>
+        <p class="price" id="Cotton"></p>
+    </div>
+
+    <div class="crop-card">
+        <img src="../images/sugarcane.jpg" alt="Sugarcane">
+        <h2>Sugarcane</h2>
+        <p>Sugarcane is a long-duration crop requiring more water.</p>
+        <button onclick="showPrice('Sugarcane', 320)">Today Price</button>
+        <p class="price" id="Sugarcane"></p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Farmer Web Portal | Designed for Farmers</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+function showPrice(cropName, price) {
+    document.getElementById(cropName).innerHTML =
+        "Today Market Price: ₹" + price + " per quintal";
+}
+</script>
+
+</body>
+</html>
