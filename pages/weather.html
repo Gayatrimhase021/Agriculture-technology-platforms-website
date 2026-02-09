@@ -30,96 +30,64 @@
         </div>
     </nav>
 </div>
-   <h2>🌤 WeatherInfo</h2>
-    <ul>
-        <li>Home</li>
-        <li>Forecast</li>
-        <li>Climate</li>
-        <li>Contact</li>
-    </ul>
-</nav>
+   <!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<!-- Main Weather Section -->
-<div class="main">
-    <h1>Today's Weather</h1>
-    <p>City: Nagpur, India</p>
-    <h2>32°C ☀️</h2>
-    <p>Sunny Weather</p>
-</div>
-   <h2>🌤 WeatherInfo</h2>
-    <ul>
-        <li>Home</li>
-        <li>Forecast</li>
-        <li>Climate</li>
-        <li>Contact</li>
-    </ul>
-</nav>
+<div class="container">
 
+    <h1>🌤 Weather Information</h1>
 
-<!-- Weather Details -->
-<div class="details">
-    <div class="box">
-        <h3>Humidity</h3>
-        <p>60%</p>
+    <!-- Main Weather Info -->
+    <div class="main-weather">
+        <h2>Nagpur Weather</h2>
+        <p><b>Temperature:</b> 32°C</p>
+        <p><b>Condition:</b> Sunny</p>
+        <p><b>Humidity:</b> 60%</p>
+        <p><b>Wind Speed:</b> 12 km/h</p>
+        <p>
+            Today's weather is warm and sunny. 
+            Perfect day for outdoor activities but stay hydrated.
+        </p>
     </div>
 
-    <div class="box">
-        <h3>Wind Speed</h3>
-        <p>12 km/h</p>
-    </div>
+    <!-- More Info Button (CSS Toggle Trick) -->
+    <input type="checkbox" id="more">
+    <label for="more" class="btn">More Weather Info</label>
 
-    <div class="box">
-        <h3>Visibility</h3>
-        <p>8 km</p>
-    </div>
-</div>
+    <!-- Hidden Extra Info -->
+    <div class="more-info">
+        <h2>About Weather</h2>
 
-<!-- Forecast -->
-<h2 class="heading">5-Day Forecast</h2>
-<div class="forecast">
+        <p>
+            Weather refers to day-to-day atmospheric conditions like 
+            temperature, humidity, rainfall, wind and sunlight.
+        </p>
 
-    <div class="card">
-        <h3>Monday</h3>
-        <p>30°C</p>
-        <p>Sunny</p>
-    </div>
+        <h3>Weather Types:</h3>
+        <ul>
+            <li>Sunny – Clear sky and bright sunlight.</li>
+            <li>Rainy – Clouds with rainfall.</li>
+            <li>Cloudy – Sky covered with clouds.</li>
+            <li>Windy – Strong air movement.</li>
+            <li>Stormy – Thunder, lightning or heavy rain.</li>
+        </ul>
 
-    <div class="card">
-        <h3>Tuesday</h3>
-        <p>29°C</p>
-        <p>Cloudy</p>
-    </div>
+        <h3>Why Weather Forecast is Important?</h3>
+        <ul>
+            <li>Helps in travel planning.</li>
+            <li>Important for farmers.</li>
+            <li>Safety during storms or heavy rain.</li>
+            <li>Daily lifestyle planning.</li>
+        </ul>
 
-    <div class="card">
-        <h3>Wednesday</h3>
-        <p>28°C</p>
-        <p>Rainy</p>
-    </div>
-
-    <div class="card">
-        <h3>Thursday</h3>
-        <p>31°C</p>
-        <p>Sunny</p>
-    </div>
-
-    <div class="card">
-        <h3>Friday</h3>
-        <p>27°C</p>
-        <p>Stormy</p>
     </div>
 
 </div>
-<!-- Weather Tips -->
-<div class="tips">
-    <h2>Weather Tips 🌱</h2>
-    <ul>
-        <li>Drink plenty of water in hot weather.</li>
-        <li>Carry umbrella in rainy season.</li>
-        <li>Wear light clothes during summer.</li>
-        <li>Check weather before travel.</li>
-    </ul>
-</div>
+
 </body>
 </html>
-
-
