@@ -30,62 +30,124 @@
         </div>
     </nav>
 </div>
-   <!DOCTYPE html>
+    <h1>🌤 Weather Information</h1>
+
+    <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather Information</title>
+    <title>Weather Information Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <h1>🌤 Weather Information</h1>
+<h1>🌤 Weather Information</h1>
+<hr>
 
-    <!-- Main Weather Info -->
-    <div class="main-weather">
-        <h2>Nagpur Weather</h2>
-        <p><b>Temperature:</b> 32°C</p>
-        <p><b>Condition:</b> Sunny</p>
-        <p><b>Humidity:</b> 60%</p>
-        <p><b>Wind Speed:</b> 12 km/h</p>
-        <p>
-            Today's weather is warm and sunny. 
-            Perfect day for outdoor activities but stay hydrated.
-        </p>
-    </div>
+<!-- Weather Image -->
+<center>
+<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+width="120">
+</center>
 
-    <!-- More Info Button (CSS Toggle Trick) -->
-    <input type="checkbox" id="more">
-    <label for="more" class="btn">More Weather Info</label>
+<h2>Nagpur Weather Report</h2>
 
-    <!-- Hidden Extra Info -->
-    <div class="more-info">
-        <h2>About Weather</h2>
+<p>
+<b>Temperature:</b> 32°C <br>
+<b>Condition:</b> Sunny ☀️ <br>
+<b>Humidity:</b> 60% <br>
+<b>Wind Speed:</b> 12 km/h
+</p>
 
-        <p>
-            Weather refers to day-to-day atmospheric conditions like 
-            temperature, humidity, rainfall, wind and sunlight.
-        </p>
+<p>
+<i>Today's weather is warm and sunny.</i>
+Stay hydrated and avoid too much sun exposure.
+</p>
 
-        <h3>Weather Types:</h3>
-        <ul>
-            <li>Sunny – Clear sky and bright sunlight.</li>
-            <li>Rainy – Clouds with rainfall.</li>
-            <li>Cloudy – Sky covered with clouds.</li>
-            <li>Windy – Strong air movement.</li>
-            <li>Stormy – Thunder, lightning or heavy rain.</li>
-        </ul>
+<hr>
 
-        <h3>Why Weather Forecast is Important?</h3>
-        <ul>
-            <li>Helps in travel planning.</li>
-            <li>Important for farmers.</li>
-            <li>Safety during storms or heavy rain.</li>
-            <li>Daily lifestyle planning.</li>
-        </ul>
+<!-- Forecast Table -->
+<h2>5 Day Weather Forecast</h2>
 
-    </div>
+<table border="1" cellpadding="10">
+<tr>
+<th>Day</th>
+<th>Image</th>
+<th>Temp</th>
+<th>Condition</th>
+</tr>
+
+<tr>
+<td>Monday</td>
+<td><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="50"></td>
+<td>30°C</td>
+<td>Sunny</td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td><img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" width="50"></td>
+<td>29°C</td>
+<td>Cloudy</td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td><img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" width="50"></td>
+<td>28°C</td>
+<td>Rainy</td>
+</tr>
+
+<tr>
+<td>Thursday</td>
+<td><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="50"></td>
+<td>31°C</td>
+<td>Sunny</td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td><img src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" width="50"></td>
+<td>27°C</td>
+<td>Stormy</td>
+</tr>
+
+</table>
+
+<hr>
+
+<!-- More Info Button -->
+<input type="checkbox" id="more">
+<label for="more" class="btn">More Weather Info</label>
+
+<div class="more-info">
+
+<h2>About Weather</h2>
+
+<p>
+<u>Weather</u> means day-to-day atmospheric conditions like 
+temperature, rainfall, humidity and wind.
+</p>
+
+<h3>Types of Weather:</h3>
+<ul>
+<li>Sunny Weather</li>
+<li>Rainy Weather</li>
+<li>Cloudy Weather</li>
+<li>Windy Weather</li>
+<li>Stormy Weather</li>
+</ul>
+
+<h3>Weather Tips:</h3>
+<ul>
+<li>Drink enough water in summer.</li>
+<li>Carry umbrella in rainy season.</li>
+<li>Wear comfortable clothes.</li>
+<li>Check weather before travel.</li>
+</ul>
+
+</div>
 
 </div>
 

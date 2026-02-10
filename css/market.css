@@ -59,69 +59,55 @@ nav {
 /* ===== BODY ===== */
 
 
-/* ===== MARKET TABLE ===== */
-.market-container {
-    width: 90%;
-    margin: 30px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    margin: 0;
 }
 
-.market-container h2 {
+header {
+    background: green;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
-    color: #2e7d32;
+    padding: 35px;
+    text-align: center;
+}
+.main-head{
+text-align: center;
+padding-top: 35px;
 }
 
 table {
-    width: 100%;
+    width: 90%;
+    margin: 30px auto;
     border-collapse: collapse;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+    background: white;
 }
 
 th {
-    background-color: #2e7d32;
+    background: darkgreen;
     color: white;
+    padding: 12px;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background: #e8ffe8;
 }
 
-/* ===== BUY BUTTON ===== */
-.buy-btn {
-    background-color: #4caf50;
+footer {
+    background: #333;
     color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-}
-
-.buy-btn:hover {
-    background-color: #45a049;
-}
-
-/* Tooltip effect (title) */
-.buy-btn[title]:hover::after {
-    content: attr(title);
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 13px;
-    border-radius: 5px;
-    white-space: nowrap;
-    z-index: 100;
+    text-align: center;
+    padding: 10px;
 }
