@@ -61,13 +61,11 @@
 }
 
 
-/* Page Title */
-
-
+/* Green Theme */
 .page-title {
     text-align: center;
     padding: 40px;
-    background: #4CAF50;
+    background: #2e8b57;
     color: white;
 }
 
@@ -80,15 +78,15 @@
     padding: 40px;
 }
 
-/* Individual Card */
+/* Card */
 .card {
-    background: white;
+    background: #f4fff4;
     width: 250px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     text-align: center;
     padding: 20px;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .card img {
@@ -97,38 +95,34 @@
     border-radius: 10px;
 }
 
-.card h3 {
-    margin: 15px 0 10px;
-}
-
 .card button {
+    margin-top: 10px;
     padding: 8px 15px;
-    background: #1f2d4a;
+    background: #2e8b57;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
 .card button:hover {
-    background: #00c3ff;
-    color: black;
+    background: darkgreen;
 }
 
-/* Table Styling */
-table {
-    width: 80%;
-    margin: 40px auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #1f2d4a;
-    padding: 12px;
+/* Crop Detail Section */
+.crop-detail {
     text-align: center;
+    padding: 40px;
 }
 
-th {
-    background: #1f2d4a;
-    color: white;
+.crop-detail img {
+    width: 300px;
+    margin: 20px 0;
+    border-radius: 10px;
 }
