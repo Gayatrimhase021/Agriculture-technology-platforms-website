@@ -1,93 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crop Information</title>
+    <title>Crop Information - Farmer Portal</title>
     <link rel="stylesheet" href="../css/crop.css">
 </head>
-
 <body>
 
-<!-- ===== NAVBAR (NO CHANGES) ===== -->
-<div class="navbar-main-container">
-    <div class="logo-container">
-        <img src="../images/logo img.jpg" alt="farming" class="main-logo">
-        <b class="project-name">Web Portal For Farmer</b>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" alt="Logo">
+        <h2>Farmer Web Portal</h2>
     </div>
 
-    <nav>
-        <div class="nav-links-container">
-            <a href="./../index.html" class="menu-item">Home</a>
-            <a href="../pages/crop.html" class="menu-item">Crops</a>
-            <a href="../pages/weather.html" class="menu-item">Weather</a>
-            <a href="../pages/market.html" class="menu-item">Market</a>
-            <a href="../pages/contact.html" class="menu-item">Contact</a>
-        </div>
+    <ul class="nav-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="crop.html">Crops</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <div class="auth-links-container">
-            <a href="./pages/login.html" class="menu-item">Login</a>
-            <a href="./pages/signup.html" class="menu-item">Signup</a>
-        </div>
-    </nav>
-</div>
+    <div class="nav-right">
+        <a href="#">Login</a>
+        <a href="#" class="signup">Signup</a>
+    </div>
+</nav>
 
-<!-- Header -->
-<header class="header">
-    <h1>Crop Information for Farmers</h1>
-    <p>Crop details and today’s market prices</p>
-</header>
+<!-- Page Heading -->
+<section class="page-title">
+    <h1>Crop Information</h1>
+</section>
 
-<!-- Crop Section -->
-<section class="crop-container">
+<!-- Crop Cards -->
+<section class="card-container">
 
-    <div class="crop-card">
-        <img src="../images/download (1).jpg" alt="Onion">
-        <h2>Onion</h2>
-        <p>Onion is an important vegetable crop grown widely in India.</p>
-        <button onclick="showPrice('Onion', 2200)">Today Price</button>
-        <p class="price" id="Onion"></p>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0" alt="Cotton">
+        <h3>Cotton</h3>
+        <p>Season: Kharif</p>
+        <p>Duration: 160-180 Days</p>
+        <button>Read More</button>
     </div>
 
-    <div class="crop-card">
-        <img src="../images/wheat.jpg" alt="Wheat">
-        <h2>Wheat</h2>
-        <p>Wheat is a major rabi crop and grows in cool climate.</p>
-        <button onclick="showPrice('Wheat', 2400)">Today Price</button>
-        <p class="price" id="Wheat"></p>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6" alt="Onion">
+        <h3>Onion</h3>
+        <p>Season: Rabi</p>
+        <p>Duration: 90-120 Days</p>
+        <button>Read More</button>
     </div>
 
-    <div class="crop-card">
-        <img src="../images/cooton.jpg" alt="Cotton">
-        <h2>Cotton</h2>
-        <p>Cotton is a cash crop used in textile 
-            or cloth industries.</p>
-        <button onclick="showPrice('Cotton', 6500)">Today Price</button>
-        <p class="price" id="Cotton"></p>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5" alt="Soyabean">
+        <h3>Soyabean</h3>
+        <p>Season: Kharif</p>
+        <p>Duration: 100-120 Days</p>
+        <button>Read More</button>
     </div>
 
-    <div class="crop-card">
-        <img src="../images/sugarecane.jpg" alt="Sugarcane">
-        <h2>Sugarcane</h2>
-        <p>Sugarcane is a long-duration crop requiring more water.</p>
-        <button onclick="showPrice('Sugarcane', 320)">Today Price</button>
-        <p class="price" id="Sugarcane"></p>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="Sugarcane">
+        <h3>Sugarcane</h3>
+        <p>Season: Annual</p>
+        <p>Duration: 10-12 Months</p>
+        <button>Read More</button>
     </div>
 
 </section>
 
-<!-- Footer -->
-<footer>
-    <p>© 2026 Farmer Web Portal | Designed for Farmers</p>
-</footer>
+<!-- Detailed Table -->
+<section>
+    <h2 style="text-align:center;">Crop Details Table</h2>
 
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-function showPrice(cropName, price) {
-    document.getElementById(cropName).innerHTML =
-        "Today Market Price: ₹" + price + " per quintal";
-}
-</script>
+    <table>
+        <tr>
+            <th>Crop</th>
+            <th>Season</th>
+            <th>Water Need</th>
+            <th>Soil Type</th>
+        </tr>
+
+        <tr>
+            <td>Cotton</td>
+            <td>Kharif</td>
+            <td>Medium</td>
+            <td>Black Soil</td>
+        </tr>
+
+        <tr>
+            <td>Onion</td>
+            <td>Rabi</td>
+            <td>Medium</td>
+            <td>Loamy Soil</td>
+        </tr>
+
+        <tr>
+            <td>Soyabean</td>
+            <td>Kharif</td>
+            <td>Medium</td>
+            <td>Well-drained Soil</td>
+        </tr>
+
+        <tr>
+            <td>Sugarcane</td>
+            <td>Annual</td>
+            <td>High</td>
+            <td>Fertile Soil</td>
+        </tr>
+
+    </table>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <p>
+        © 2026 Farmer Web Portal | 
+        <a href="mailto:farmerportal@gmail.com" target="_blank">
+            farmerportal@gmail.com
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
