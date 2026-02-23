@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Crop Information - Farmer Portal</title>
-    <link rel="stylesheet" href="../css/crop.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -27,36 +27,126 @@
     </div>
 </nav>
 
-<section class="page-title">
-    <h1>Crop Information</h1>
+<!-- Hero Section -->
+<section class="crop-hero">
+    <h1>Explore Crop Information</h1>
+    <p>Detailed guide about major crops grown in India</p>
 </section>
 
 <!-- Crop Cards -->
 <section class="card-container">
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0" alt="Cotton">
+        <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0">
         <h3>Cotton</h3>
-        <button onclick="showInfo('cotton')">Read More</button>
+        <p>Kharif Crop | Black Soil</p>
+        <a href="#cotton"><button>Read More</button></a>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6" alt="Onion">
+        <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6">
         <h3>Onion</h3>
-        <button onclick="showInfo('onion')">Read More</button>
+        <p>Rabi Crop | Loamy Soil</p>
+        <a href="#onion"><button>Read More</button></a>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5" alt="Soyabean">
+        <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5">
         <h3>Soyabean</h3>
-        <button onclick="showInfo('soyabean')">Read More</button>
+        <p>Kharif Crop | Fertile Soil</p>
+        <a href="#soyabean"><button>Read More</button></a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3">
+        <h3>Sugarcane</h3>
+        <p>Annual Crop | High Water Need</p>
+        <a href="#sugarcane"><button>Read More</button></a>
     </div>
 
 </section>
 
-<!-- Crop Detailed Info -->
-<section class="crop-detail" id="cropDetail">
-    <!-- JS madun info yenar -->
+<!-- Detailed Sections -->
+
+<section class="detail-section" id="cotton">
+    <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0">
+    <div>
+        <h2>Cotton</h2>
+        <p>Cotton is a major Kharif crop grown in black soil. 
+        It requires warm climate and moderate rainfall. 
+        Duration: 160-180 days. 
+        Major producing states: Maharashtra, Gujarat, Telangana.</p>
+    </div>
+</section>
+
+<section class="detail-section" id="onion">
+    <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6">
+    <div>
+        <h2>Onion</h2>
+        <p>Onion is grown in Rabi season. 
+        Requires well-drained loamy soil. 
+        Duration: 90-120 days. 
+        Major producing states: Maharashtra, Karnataka.</p>
+    </div>
+</section>
+
+<section class="detail-section" id="soyabean">
+    <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5">
+    <div>
+        <h2>Soyabean</h2>
+        <p>Soyabean is protein-rich Kharif crop. 
+        Requires medium rainfall and fertile soil. 
+        Duration: 100-120 days. 
+        Major producing states: Madhya Pradesh, Maharashtra.</p>
+    </div>
+</section>
+
+<section class="detail-section" id="sugarcane">
+    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3">
+    <div>
+        <h2>Sugarcane</h2>
+        <p>Sugarcane is a long duration annual crop. 
+        Requires heavy irrigation and fertile soil. 
+        Duration: 10-12 months. 
+        Major producing states: Uttar Pradesh, Maharashtra.</p>
+    </div>
+</section>
+
+<!-- Table -->
+<section>
+    <h2 class="table-title">Crop Comparison Table</h2>
+    <table>
+        <tr>
+            <th>Crop</th>
+            <th>Season</th>
+            <th>Duration</th>
+            <th>Water Need</th>
+        </tr>
+        <tr>
+            <td>Cotton</td>
+            <td>Kharif</td>
+            <td>160-180 Days</td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td>Onion</td>
+            <td>Rabi</td>
+            <td>90-120 Days</td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td>Soyabean</td>
+            <td>Kharif</td>
+            <td>100-120 Days</td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td>Sugarcane</td>
+            <td>Annual</td>
+            <td>10-12 Months</td>
+            <td>High</td>
+        </tr>
+    </table>
 </section>
 
 <!-- Footer -->
@@ -68,44 +158,6 @@
         </a>
     </p>
 </footer>
-
-<script>
-function showInfo(crop){
-
-    let detail = document.getElementById("cropDetail");
-
-    if(crop === "cotton"){
-        detail.innerHTML = `
-        <h2>Cotton Information</h2>
-        <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0">
-        <p>Cotton is a major Kharif crop grown in black soil. 
-        It requires moderate rainfall and warm climate. 
-        Duration is around 160-180 days.</p>
-        `;
-    }
-
-    if(crop === "onion"){
-        detail.innerHTML = `
-        <h2>Onion Information</h2>
-        <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6">
-        <p>Onion is grown in Rabi season. 
-        It requires well-drained loamy soil and moderate water supply.
-        Duration is 90-120 days.</p>
-        `;
-    }
-
-    if(crop === "soyabean"){
-        detail.innerHTML = `
-        <h2>Soyabean Information</h2>
-        <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5">
-        <p>Soyabean is a Kharif crop rich in protein.
-        It requires medium rainfall and fertile soil.
-        Duration is 100-120 days.</p>
-        `;
-    }
-
-}
-</script>
 
 </body>
 </html>
