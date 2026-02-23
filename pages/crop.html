@@ -27,7 +27,6 @@
     </div>
 </nav>
 
-<!-- Page Heading -->
 <section class="page-title">
     <h1>Crop Information</h1>
 </section>
@@ -38,78 +37,26 @@
     <div class="card">
         <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0" alt="Cotton">
         <h3>Cotton</h3>
-        <p>Season: Kharif</p>
-        <p>Duration: 160-180 Days</p>
-        <button>Read More</button>
+        <button onclick="showInfo('cotton')">Read More</button>
     </div>
 
     <div class="card">
         <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6" alt="Onion">
         <h3>Onion</h3>
-        <p>Season: Rabi</p>
-        <p>Duration: 90-120 Days</p>
-        <button>Read More</button>
+        <button onclick="showInfo('onion')">Read More</button>
     </div>
 
     <div class="card">
         <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5" alt="Soyabean">
         <h3>Soyabean</h3>
-        <p>Season: Kharif</p>
-        <p>Duration: 100-120 Days</p>
-        <button>Read More</button>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="Sugarcane">
-        <h3>Sugarcane</h3>
-        <p>Season: Annual</p>
-        <p>Duration: 10-12 Months</p>
-        <button>Read More</button>
+        <button onclick="showInfo('soyabean')">Read More</button>
     </div>
 
 </section>
 
-<!-- Detailed Table -->
-<section>
-    <h2 style="text-align:center;">Crop Details Table</h2>
-
-    <table>
-        <tr>
-            <th>Crop</th>
-            <th>Season</th>
-            <th>Water Need</th>
-            <th>Soil Type</th>
-        </tr>
-
-        <tr>
-            <td>Cotton</td>
-            <td>Kharif</td>
-            <td>Medium</td>
-            <td>Black Soil</td>
-        </tr>
-
-        <tr>
-            <td>Onion</td>
-            <td>Rabi</td>
-            <td>Medium</td>
-            <td>Loamy Soil</td>
-        </tr>
-
-        <tr>
-            <td>Soyabean</td>
-            <td>Kharif</td>
-            <td>Medium</td>
-            <td>Well-drained Soil</td>
-        </tr>
-
-        <tr>
-            <td>Sugarcane</td>
-            <td>Annual</td>
-            <td>High</td>
-            <td>Fertile Soil</td>
-        </tr>
-
-    </table>
+<!-- Crop Detailed Info -->
+<section class="crop-detail" id="cropDetail">
+    <!-- JS madun info yenar -->
 </section>
 
 <!-- Footer -->
@@ -121,6 +68,44 @@
         </a>
     </p>
 </footer>
+
+<script>
+function showInfo(crop){
+
+    let detail = document.getElementById("cropDetail");
+
+    if(crop === "cotton"){
+        detail.innerHTML = `
+        <h2>Cotton Information</h2>
+        <img src="https://images.unsplash.com/photo-1592928304036-86f1f3b9cfc0">
+        <p>Cotton is a major Kharif crop grown in black soil. 
+        It requires moderate rainfall and warm climate. 
+        Duration is around 160-180 days.</p>
+        `;
+    }
+
+    if(crop === "onion"){
+        detail.innerHTML = `
+        <h2>Onion Information</h2>
+        <img src="https://images.unsplash.com/photo-1604908177522-4292a3c8f6c6">
+        <p>Onion is grown in Rabi season. 
+        It requires well-drained loamy soil and moderate water supply.
+        Duration is 90-120 days.</p>
+        `;
+    }
+
+    if(crop === "soyabean"){
+        detail.innerHTML = `
+        <h2>Soyabean Information</h2>
+        <img src="https://images.unsplash.com/photo-1609132718486-4d36e4e7f7a5">
+        <p>Soyabean is a Kharif crop rich in protein.
+        It requires medium rainfall and fertile soil.
+        Duration is 100-120 days.</p>
+        `;
+    }
+
+}
+</script>
 
 </body>
 </html>
