@@ -1,155 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Portal for Farmer</title>
-    <link rel="stylesheet" href="../css/weather.css">
-</head>
-
-<body>
-
-<!-- ===== NAVBAR (UNCHANGED) ===== -->
-<div class="navbar-main-container">
-    <div class="logo-container">
-        <img src="./images/logo img.jpg" alt="farming" class="main-logo">
-        <b class="project-name">Web Portal For Farmer</b>
-    </div>
- <nav>
-        <div class="nav-links-container">
-            <a href="./../index.html" class="menu-item">Home</a>
-            <a href="./pages/crop.html" class="menu-item">Crops</a>
-            <a href="./pages/weather.html" class="menu-item">Weather</a>
-            <a href="./pages/market.html" class="menu-item">Market</a>
-            <a href="./pages/contact.html" class="menu-item">Contact</a>
-        </div>
-
-        <div class="auth-links-container">
-            <a href="./pages/login.html" class="menu-item">Login</a>
-            <a href="./pages/signup.html" class="menu-item">Signup</a>
-        </div>
-    </nav>
-</div>
-    <h1>🌤 Weather Information</h1>
-
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>Weather Information Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather – Krishi Darpan</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/weather.css">
 </head>
 <body>
 
-<div class="container">
-
-<h1>🌤 Weather Information</h1>
-<hr>
-
-<!-- Weather Image -->
-<center>
-<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
-width="120">
-</center>
-
-<h2>Nagpur Weather Report</h2>
-
-<p>
-<b>Temperature:</b> 32°C <br>
-<b>Condition:</b> Sunny ☀️ <br>
-<b>Humidity:</b> 60% <br>
-<b>Wind Speed:</b> 12 km/h
-</p>
-
-<p>
-<i>Today's weather is warm and sunny.</i>
-Stay hydrated and avoid too much sun exposure.
-</p>
-
-<hr>
-
-<!-- Forecast Table -->
-<h2>5 Day Weather Forecast</h2>
-
-<table border="1" cellpadding="10">
-<tr>
-<th>Day</th>
-<th>Image</th>
-<th>Temp</th>
-<th>Condition</th>
-</tr>
-
-<tr>
-<td>Monday</td>
-<td><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="50"></td>
-<td>30°C</td>
-<td>Sunny</td>
-</tr>
-
-<tr>
-<td>Tuesday</td>
-<td><img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" width="50"></td>
-<td>29°C</td>
-<td>Cloudy</td>
-</tr>
-
-<tr>
-<td>Wednesday</td>
-<td><img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" width="50"></td>
-<td>28°C</td>
-<td>Rainy</td>
-</tr>
-
-<tr>
-<td>Thursday</td>
-<td><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="50"></td>
-<td>31°C</td>
-<td>Sunny</td>
-</tr>
-
-<tr>
-<td>Friday</td>
-<td><img src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" width="50"></td>
-<td>27°C</td>
-<td>Stormy</td>
-</tr>
-
-</table>
-
-<hr>
-
-<!-- More Info Button -->
-<input type="checkbox" id="more">
-<label for="more" class="btn">More Weather Info</label>
-
-<div class="more-info">
-
-<h2>About Weather</h2>
-
-<p>
-<u>Weather</u> means day-to-day atmospheric conditions like 
-temperature, rainfall, humidity and wind.
-</p>
-
-<h3>Types of Weather:</h3>
-<ul>
-<li>Sunny Weather</li>
-<li>Rainy Weather</li>
-<li>Cloudy Weather</li>
-<li>Windy Weather</li>
-<li>Stormy Weather</li>
-</ul>
-
-<h3>Weather Tips:</h3>
-<ul>
-<li>Drink enough water in summer.</li>
-<li>Carry umbrella in rainy season.</li>
-<li>Wear comfortable clothes.</li>
-<li>Check weather before travel.</li>
-</ul>
-
+<div class="page-header">
+  <h1>🌦️ Live Weather Updates</h1>
+  <p>Real-time weather data and agricultural advisories for your location</p>
 </div>
 
-</div>
+<section class="section">
+  <div class="weather-search">
+    <input type="text" id="cityInput" placeholder="Enter city (e.g. Nashik, Pune, Nagpur...)" value="Shrirampur">
+    <button onclick="fetchWeather()">Get Weather 🔍</button>
+  </div>
 
+  <div id="weatherDisplay">
+    <div class="loading">Loading weather data</div>
+  </div>
+
+  <h3 class="sub-heading">📅 7-Day Forecast</h3>
+  <div class="forecast-grid" id="forecastGrid"></div>
+
+  <h3 class="sub-heading">🌾 Agro-Meteorological Advisory</h3>
+  <div class="agro-tips" id="agroTips"></div>
+</section>
+
+<script src="../js/layout.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/weather.js"></script>
 </body>
 </html>
+

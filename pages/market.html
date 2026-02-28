@@ -1,81 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Page</title>
+    <title>Market Rates - Ahilyanagar</title>
     <link rel="stylesheet" href="../css/market.css">
 </head>
-
 <body>
 
-    <!-- Navbar (waise hi jo aapne diya) -->
-    <header class="navbar-main-container">
-        <div class="logo-container">
-            <img src="./images/logo img.jpg" alt="farming" class="main-logo">
-            <span class="project-name">Web Portal For Farmer</span>
-        </div>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" alt="Logo">
+        <h2>Farmer Web Portal</h2>
+    </div>
 
-        <nav>
-           <div class="nav-links-container">
-            <a href="./../index.html" class="menu-item">Home</a>
-            <a href="../pages/crop.html" class="menu-item">Crops</a>
-            <a href="../pages/weather.html" class="menu-item">Weather</a>
-            <a href="../pages/market.html" class="menu-item">Market</a>
-            <a href="../pages/contact.html" class="menu-item">Contact</a>
-        </div>
+    <ul class="nav-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="crop.html">Crops</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="market.html" class="active">Market</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <div class="auth-links-container">
-            <a href="./pages/login.html" class="menu-item">Login</a>
-            <a href="./pages/signup.html" class="menu-item">Signup</a>
-            </div>
-        </nav>
-    </header>
+    <div class="nav-right">
+        <a href="#">Login</a>
+        <a href="#" class="signup-btn">Signup</a>
+    </div>
+</nav>
 
-    <h1 class="main-head">🌾 Crop Market</h1>
-    <p>Farm Crops & Weather Information</p>
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Ahilyanagar APMC Market Rates</h1>
+    <p>Latest Agricultural Crop Prices Updated Daily</p>
+</section>
 
-<table border="1">
-    <tr>
-        <th>Crop Image</th>
-        <th>Crop Name</th>
-        <th>Price</th>
-        <th>Weather</th>
-    </tr>
+<!-- Market Cards -->
+<section class="cards">
 
-    <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Onions.jpg"></td>
-        <td>Onion</td>
-        <td>₹30/kg</td>
-        <td>Cool & Dry</td>
-    </tr>
+    <div class="card">
+        <h3>Cotton</h3>
+        <p>Min: ₹6,500 / Quintal</p>
+        <p>Max: ₹7,200 / Quintal</p>
+        <button>View Details</button>
+    </div>
 
-    <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Sugarcane.jpg"></td>
-        <td>Sugarcane</td>
-        <td>₹280/qtl</td>
-        <td>Warm & Humid</td>
-    </tr>
+    <div class="card">
+        <h3>Onion</h3>
+        <p>Min: ₹1,200 / Quintal</p>
+        <p>Max: ₹1,800 / Quintal</p>
+        <button>View Details</button>
+    </div>
 
-    <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/CottonPlant.JPG"></td>
-        <td>Cotton</td>
-        <td>₹6500/qtl</td>
-        <td>Hot Climate</td>
-    </tr>
+    <div class="card">
+        <h3>Soyabean</h3>
+        <p>Min: ₹4,200 / Quintal</p>
+        <p>Max: ₹4,800 / Quintal</p>
+        <button>View Details</button>
+    </div>
 
-    <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Wheat_close-up.JPG"></td>
-        <td>Wheat</td>
-        <td>₹2200/qtl</td>
-        <td>Cool Season</td>
-    </tr>
+    <div class="card">
+        <h3>Sugarcane</h3>
+        <p>Min: ₹3,000 / Ton</p>
+        <p>Max: ₹3,400 / Ton</p>
+        <button>View Details</button>
+    </div>
 
-</table>
+</section>
 
-<footer>
-    © 2026 Crop Market Information
+<!-- Table Section -->
+<section class="table-section">
+    <h2>Ahilyanagar Market Price Table</h2>
+
+    <table>
+        <tr>
+            <th>Crop</th>
+            <th>Minimum Price</th>
+            <th>Maximum Price</th>
+            <th>Location</th>
+        </tr>
+
+        <tr>
+            <td>Cotton</td>
+            <td>₹6,500</td>
+            <td>₹7,200</td>
+            <td>Ahilyanagar</td>
+        </tr>
+
+        <tr>
+            <td>Onion</td>
+            <td>₹1,200</td>
+            <td>₹1,800</td>
+            <td>Ahilyanagar</td>
+        </tr>
+
+        <tr>
+            <td>Soyabean</td>
+            <td>₹4,200</td>
+            <td>₹4,800</td>
+            <td>Ahilyanagar</td>
+        </tr>
+
+        <tr>
+            <td>Sugarcane</td>
+            <td>₹3,000</td>
+            <td>₹3,400</td>
+            <td>Ahilyanagar</td>
+        </tr>
+
+    </table>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <p>© 2026 Farmer Web Portal | 
+        <a href="mailto:farmerportal@gmail.com">farmerportal@gmail.com</a>
+    </p>
 </footer>
 
 </body>
