@@ -1,120 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Market Rates - Ahilyanagar</title>
-    <link rel="stylesheet" href="../css/market.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Prices – Krishi Darpan</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/market.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-left">
-        <img src="logo.png" alt="Logo">
-        <h2>Farmer Web Portal</h2>
+<div class="page-header">
+  <h1>📈 Live Mandi Prices</h1>
+  <p>Today's commodity prices from APMC mandis across India</p>
+</div>
+
+<section class="section">
+  <div class="market-header">
+    <div>
+      <div class="live-badge"><span class="live-dot"></span> Live Prices — Updated Today</div>
+      <p class="data-source">Data sourced from AGMARKNET — Govt. of India</p>
     </div>
+    <select class="mandi-select" onchange="filterMarket(this.value)">
+      <option value="all">All States</option>
+      <option value="maharashtra">Maharashtra</option>
+      <option value="punjab">Punjab</option>
+      <option value="up">Uttar Pradesh</option>
+      <option value="mp">Madhya Pradesh</option>
+      <option value="haryana">Haryana</option>
+    </select>
+  </div>
 
-    <ul class="nav-center">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="crop.html">Crops</a></li>
-        <li><a href="scheme.html">Schemes</a></li>
-        <li><a href="market.html" class="active">Market</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="price-chart-row" id="marketStats"></div>
 
-    <div class="nav-right">
-        <a href="#">Login</a>
-        <a href="#" class="signup-btn">Signup</a>
-    </div>
-</nav>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('vegetables', this)">🥦 Vegetables</button>
+    <button class="tab" onclick="switchTab('cereals', this)">🌾 Cereals &amp; Pulses</button>
+    <button class="tab" onclick="switchTab('oilseeds', this)">🌻 Oilseeds &amp; Spices</button>
+  </div>
 
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Ahilyanagar APMC Market Rates</h1>
-    <p>Latest Agricultural Crop Prices Updated Daily</p>
+  <div id="tab-vegetables" class="tab-content active">
+    <div class="market-table-wrap"><table class="market-table" id="vegetableTable"></table></div>
+  </div>
+  <div id="tab-cereals" class="tab-content">
+    <div class="market-table-wrap"><table class="market-table" id="cerealTable"></table></div>
+  </div>
+  <div id="tab-oilseeds" class="tab-content">
+    <div class="market-table-wrap"><table class="market-table" id="oilseedTable"></table></div>
+  </div>
 </section>
 
-<!-- Market Cards -->
-<section class="cards">
-
-    <div class="card">
-        <h3>Cotton</h3>
-        <p>Min: ₹6,500 / Quintal</p>
-        <p>Max: ₹7,200 / Quintal</p>
-        <button>View Details</button>
-    </div>
-
-    <div class="card">
-        <h3>Onion</h3>
-        <p>Min: ₹1,200 / Quintal</p>
-        <p>Max: ₹1,800 / Quintal</p>
-        <button>View Details</button>
-    </div>
-
-    <div class="card">
-        <h3>Soyabean</h3>
-        <p>Min: ₹4,200 / Quintal</p>
-        <p>Max: ₹4,800 / Quintal</p>
-        <button>View Details</button>
-    </div>
-
-    <div class="card">
-        <h3>Sugarcane</h3>
-        <p>Min: ₹3,000 / Ton</p>
-        <p>Max: ₹3,400 / Ton</p>
-        <button>View Details</button>
-    </div>
-
-</section>
-
-<!-- Table Section -->
-<section class="table-section">
-    <h2>Ahilyanagar Market Price Table</h2>
-
-    <table>
-        <tr>
-            <th>Crop</th>
-            <th>Minimum Price</th>
-            <th>Maximum Price</th>
-            <th>Location</th>
-        </tr>
-
-        <tr>
-            <td>Cotton</td>
-            <td>₹6,500</td>
-            <td>₹7,200</td>
-            <td>Ahilyanagar</td>
-        </tr>
-
-        <tr>
-            <td>Onion</td>
-            <td>₹1,200</td>
-            <td>₹1,800</td>
-            <td>Ahilyanagar</td>
-        </tr>
-
-        <tr>
-            <td>Soyabean</td>
-            <td>₹4,200</td>
-            <td>₹4,800</td>
-            <td>Ahilyanagar</td>
-        </tr>
-
-        <tr>
-            <td>Sugarcane</td>
-            <td>₹3,000</td>
-            <td>₹3,400</td>
-            <td>Ahilyanagar</td>
-        </tr>
-
-    </table>
-</section>
-
-<!-- Footer -->
-<footer id="contact">
-    <p>© 2026 Farmer Web Portal | 
-        <a href="mailto:farmerportal@gmail.com">farmerportal@gmail.com</a>
-    </p>
-</footer>
-
+<script src="../js/layout.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/market.js"></script>
 </body>
 </html>

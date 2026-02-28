@@ -1,154 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Crop Information - Farmer Portal</title>
-    <link rel="stylesheet" href="../css/crop.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crops – Krishi Darpan</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/crops.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-left">
-        <img src="logo.png" alt="Logo">
-        <h2>Farmer Web Portal</h2>
+<div class="page-header">
+  <h1>🌱 Crop Information Guide</h1>
+  <p>Detailed advisory on cultivation, seasons, water requirements and more</p>
+</div>
+
+<section class="section">
+  <div class="top-bar">
+    <div class="crops-filter">
+      <button class="filter-btn active" onclick="filterCrops('all', this)">All Crops</button>
+      <button class="filter-btn" onclick="filterCrops('kharif', this)">Kharif</button>
+      <button class="filter-btn" onclick="filterCrops('rabi', this)">Rabi</button>
+      <button class="filter-btn" onclick="filterCrops('annual', this)">Annual</button>
     </div>
-
-    <ul class="nav-center">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/crop.html">Crops</a></li>
-        <li><a href="../pages/schemes.html">Schemes</a></li>
-        <li><a href="#">Weather</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-right">
-        <a href="">Login</a>
-        <a href="" class="signup">Signup</a>
+    <div class="search-bar">
+      <input type="text" id="cropSearch" oninput="searchCrops()" placeholder="Search crops...">
+      <button>🔍</button>
     </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="crop-hero">
-    <h1>Explore Crop Information</h1>
-    <p>Detailed guide about major crops grown in India</p>
+  </div>
+  <div class="crops-grid" id="cropsGrid"></div>
 </section>
 
-<!-- Crop Cards -->
-<section class="card-container">
-
-    <div class="card">
-        <img src="../images/coton-img.jpg">
-        <h3>Cotton</h3>
-        <p>Kharif Crop | Black Soil</p>
-        <button onclick="showDetail('cotton')">Read More</button>
-    </div>
-
-    <div class="card">
-        <img src="../images/onion.jpg">
-        <h3>Onion</h3>
-        <p>Rabi Crop | Loamy Soil</p>
-        <button onclick="showDetail('onion')">Read More</button>
-    </div>
-
-    <div class="card">
-        <img src="../images/soyabean.jpg">
-        <h3>Soyabean</h3>
-        <p>Kharif Crop | Fertile Soil</p>
-        <button onclick="showDetail('soyabean')">Read More</button>
-    </div>
-
-    <div class="card">
-        <img src="../images/sugarecane.jpg">
-        <h3>Sugarcane</h3>
-        <p>Annual Crop | High Water Need</p>
-        <button onclick="showDetail('sugarcane')">Read More</button>
-    </div>
-
-    <!-- ✅ WHEAT FIXED -->
-    <div class="card">
-        <img src="../images/wheat-img.webp">
-        <h3>Wheat</h3>
-        <p>Rabi Crop | Alluvial Soil</p>
-        <button onclick="showDetail('wheat')">Read More</button>
-    </div>
-
-</section>
-
-<!-- Detail Sections -->
-
-<section class="detail-section" id="cotton">
-    <img src="../images/cooton.jpg">
-    <div>
-        <h2>Cotton</h2>
-        <p>Cotton is a major Kharif crop grown in black soil.
-        Duration: 160-180 days.</p>
-    </div>
-</section>
-
-<section class="detail-section" id="onion">
-    <img src="../images/onion.jpg">
-    <div>
-        <h2>Onion</h2>
-        <p>Onion is grown in Rabi season.
-        Duration: 90-120 days.</p>
-    </div>
-</section>
-
-<section class="detail-section" id="soyabean">
-    <img src="../images/soyabean.jpg">
-    <div>
-        <h2>Soyabean</h2>
-        <p>Soyabean is protein-rich Kharif crop.
-        Duration: 100-120 days.</p>
-    </div>
-</section>
-
-<section class="detail-section" id="sugarcane">
-    <img src="../images/sugarecane.jpg">
-    <div>
-        <h2>Sugarcane</h2>
-        <p>Sugarcane is long duration crop.
-        Duration: 10-12 months.</p>
-    </div>
-</section>
-
-<section class="detail-section" id="wheat">
-    <img src="../images/wheat-img.webp">
-    <div>
-        <h2>Wheat</h2>
-        <p>
-        Wheat is one of the most important Rabi crops grown in India.
-        Duration: 110-140 days.
-        </p>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="contact">
-    <p>© 2026 Farmer Web Portal | farmerportal@gmail.com</p>
-</footer>
-
-<!-- JavaScript -->
-<script>
-function showDetail(id) {
-
-    var sections = document.querySelectorAll('.detail-section');
-
-    sections.forEach(function(section) {
-        section.style.display = "none";
-    });
-
-    var selected = document.getElementById(id);
-
-    if (selected) {
-        selected.style.display = "flex";
-        window.scrollTo({
-            top: selected.offsetTop - 80,
-            behavior: "smooth"
-        });
-    }
-}
-</script>
-
+<script src="../js/layout.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/crops.js"></script>
 </body>
 </html>
